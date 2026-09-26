@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Header</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for the cart and sign-in icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <!-- Logo Section -->
+      <div class="logo">
+            <span class="logo-icon">🍽</span> CampusEats
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+           <a href="index.html" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">Menu</a>
+            <a href="#" class="nav-link">Service</a>
+            <a href="#" class="nav-link">About us</a>
+            <a href="#" class="nav-link">Contacts</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+            <!-- Cart Icon with Badge -->
+            <div class="cart-container">
+                <i class="fa-solid fa-basket-shopping cart-icon"></i>
+                <span class="cart-badge">0</span>
+            </div>
+
+            <!-- Sign In Button -->
+            <a href="#" class="sign-in-btn">
+                Sign in <i class="fa-solid fa-arrow-right-to-bracket sign-in-icon"></i>
+            </a>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+   <section class="hero-section" style="background-image: url('campusfood.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            
+            <!-- Availability Badge -->
+            <div class="availability-badge">
+                <span class="dot"></span>
+                6 kitchens open now across campus
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="hero-title">
+                Campus food,<br>
+                <span class="highlight">delivered fast.</span>
+            </h1>
+
+            <!-- Description Text -->
+            <p class="hero-desc">
+                Order from 6 campus kitchens, team up with classmates, earn reward points, and get food straight to your dorm or classroom.
+            </p>
+
+            <!-- Buttons Row -->
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">
+                    <i class="fa-solid fa-bag-shopping"></i> Order Now <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#" class="btn-secondary">Sign In / Register</a>
+            </div>
+
+            <!-- Search Bar Row -->
+            <div class="search-container">
+                <input type="text" placeholder="Search kitchens, dishes, cuisines...">
+                <button class="search-btn">Search</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= STATISTICS SECTION ================= -->
+    <section class="stats-section">
+        <div class="stat-item">
+            <span class="stat-icon">🏪</span>
+            <div class="stat-info">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Campus Kitchens</span>
+            </div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">🎓</span>
+            <div class="stat-info">
+                <span class="stat-number">2,400+</span>
+                <span class="stat-label">Happy Students</span>
+            </div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">⭐</span>
+            <div class="stat-info">
+                <span class="stat-number">4.8★</span>
+                <span class="stat-label">Average Rating</span>
+            </div>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">⚡</span>
+            <div class="stat-info">
+                <span class="stat-number">12 min</span>
+                <span class="stat-label">Avg Delivery</span>
+            </div>
+        </div>
+    </section>
+
+    
+        <div class="cuisine-grid">
+            <div class="cuisine-card">
+                <span class="cuisine-emoji">🍔</span>
+                <span class="cuisine-name">American</span>
+            </div>
+            <div class="cuisine-card">
+                <span class="cuisine-emoji">🍕</span>
+                <span class="cuisine-name">Italian</span>
+            </div>
+            <div class="cuisine-card">
+                <span class="cuisine-emoji">🍣</span>
+                <span class="cuisine-name">Japanese</span>
+            </div>
+            <div class="cuisine-card">
+                <span class="cuisine-emoji">🍛</span>
+                <span class="cuisine-name">Indian</span>
+            </div>
+            <div class="cuisine-card">
+                <span class="cuisine-emoji">🌮</span>
+                <span class="cuisine-name">Mexican</span>
+            </div>
+            <div class="cuisine-card">
+                <span class="cuisine-emoji">🥗</span>
+                <span class="cuisine-name">Healthy</span>
+            </div>
+        </div>
+    </section>
+
+      <!-- ================= SECTION 1: FEATURED KITCHENS ================= -->
+    <section class="featured-section">
+        <div class="featured-header">
+            <div>
+                <span class="section-subtitle">FEATURED</span>
+                <h2 class="section-title">Top kitchens right now</h2>
+            </div>
+            <a href="#" class="view-all-link">View All →</a>
+        </div>
+
+        <div class="featured-grid">
+            <!-- Card 1 -->
+            <div class="featured-card">
+                <div class="card-image-wrapper">
+                    <span class="card-badge">Most Popular</span>
+                    <!-- Place your image here: images/kitchen1.jpg -->
+                    <img src="images/kitchen1.jpg" alt="The Main Kitchen" class="card-image">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">The Main Kitchen</h3>
+                    <div class="card-meta">
+                        <span class="rating">⭐ 4.8</span>
+                        <span class="delivery-time">10–15 min</span>
+                    </div>
+                    <button class="order-btn">Order Now →</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="featured-card">
+                <div class="card-image-wrapper">
+                    <span class="card-badge">Top Rated</span>
+                    <!-- Place your image here: images/kitchen2.jpg -->
+                    <img src="images/kitchen2.jpg" alt="Sakura Bento" class="card-image">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Sakura Bento</h3>
+                    <div class="card-meta">
+                        <span class="rating">⭐ 4.9</span>
+                        <span class="delivery-time">8–12 min</span>
+                    </div>
+                    <button class="order-btn">Order Now →</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="featured-card">
+                <div class="card-image-wrapper">
+                    <span class="card-badge">New</span>
+                    <!-- Place your image here: images/kitchen3.jpg -->
+                    <img src="images/kitchen3.jpg" alt="Spice Garden" class="card-image">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Spice Garden</h3>
+                    <div class="card-meta">
+                        <span class="rating">⭐ 4.6</span>
+                        <span class="delivery-time">15–20 min</span>
+                    </div>
+                    <button class="order-btn">Order Now →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 2: WHY CAMPUSEATS ================= -->
+    <section class="why-section">
+        <span class="section-subtitle">WHY CAMPUSEATS</span>
+        <h2 class="section-title">Built for student life</h2>
+
+        <div class="why-grid">
+            <!-- Feature 1 -->
+            <div class="why-card">
+                <div class="why-icon">👥</div>
+                <h3 class="why-title">Team Ordering</h3>
+                <p class="why-desc">Order together with friends and split the bill automatically.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="why-card">
+                <div class="why-icon">🎁</div>
+                <h3 class="why-title">Earn Rewards</h3>
+                <p class="why-desc">Get points on every order and redeem them for free food.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="why-card">
+                <div class="why-icon">⚡</div>
+                <h3 class="why-title">Lightning Fast</h3>
+                <p class="why-desc">Average delivery time of just 12 minutes to your dorm.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="why-card">
+                <div class="why-icon">🏫</div>
+                <h3 class="why-title">Campus-Wide</h3>
+                <p class="why-desc">We deliver to every building on campus, no matter where you are.</p>
+            </div>
+            <!-- Feature 5 -->
+            <div class="why-card">
+                <div class="why-icon">💳</div>
+                <h3 class="why-title">Flexible Payment</h3>
+                <p class="why-desc">Pay with card, campus card, or digital wallet — your choice.</p>
+            </div>
+            <!-- Feature 6 -->
+            <div class="why-card">
+                <div class="why-icon">📋</div>
+                <h3 class="why-title">Order History</h3>
+                <p class="why-desc">Quickly reorder your favorite meals with one tap.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 3: CTA ================= -->
+    <section class="cta-section">
+        <div class="cta-box">
+            <span class="cta-subtitle">JOIN 2,400+ STUDENTS</span>
+            <h2 class="cta-title">Ready to order your first<br>meal?</h2>
+            <p class="cta-desc">Sign up free, earn 100 welcome points, and get your first delivery in under 15 minutes.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Get Started Free →</a>
+                <a href="#" class="btn-secondary">Browse Kitchens</a>
+            </div>
+            <div class="cta-circle-icon">🍽️</div>
+            <div class="cta-small-icon">🍔</div>
+        </div>
+    </section>
+
+///
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-icon">🍽</div>
+        <h2 class="footer-logo">CampusEats</h2>
+        <p class="footer-copy">© 2026 CampusEats · Made for students, by students</p>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Privacy</a>
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Support</a>
+        </div>
+    </footer>
+
+    <!-- Bottom Section for the Visible Character/Image -->
+   
+
+</body>
+</html>
