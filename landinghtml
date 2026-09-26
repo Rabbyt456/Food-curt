@@ -1,1 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusEats – Skip the Lunch Queue</title>
+    <link rel="stylesheet" href="landing.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <!-- ================= 1. NAVBAR ================= -->
+    <header class="navbar">
+               <!-- Navbar Logo Area -->
+        <div class="logo">
+            <span class="logo-icon">🍽</span> CampusEats
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Service</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <a href="#" class="sign-in-btn">Sign In</a>
+    </header>
+
+    <!-- ================= 2. HERO ================= -->
+   <!-- ================= 2. HERO ================= -->
+      <!-- ================= 2. HERO (Full Background) ================= -->
+    <section class="hero">
+        <div class="hero-container">
+            
+            <!-- Badge -->
+            <div class="hero-badge">MADE FOR STUDENTS</div>
+
+            <!-- Main Heading -->
+            <h1 class="hero-title">
+                Skip the<br>
+                <span class="highlight">Lunch Queue.</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p class="hero-sub">
+                Order your favorite campus food ahead, skip the line, and get back to what matters most.
+            </p>
+
+            <!-- Buttons -->
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Get Started →</a>
+                <a href="#" class="btn-outline">Explore CampusEats</a>
+            </div>
+
+            <!-- Feature List -->
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <span class="feature-icon">⚡</span>
+                    <span>Fast Pickup</span>
+                </div>
+                <div class="hero-feature">
+                    <span class="feature-icon">🍱</span>
+                    <span>Multiple Kitchens</span>
+                </div>
+                <div class="hero-feature">
+                    <span class="feature-icon">🎓</span>
+                    <span>Made for Students</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= 3. POPULAR CATEGORIES ================= -->
+    <section class="section">
+        <div class="section-header center">
+            <span class="section-subtitle">BROWSE MENU</span>
+            <h2 class="section-title">Popular Categories</h2>
+        </div>
+
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-img">🍔</div>
+                <h3>Burgers</h3>
+                <p>12 items</p>
+            </div>
+            <div class="category-card">
+                <div class="category-img">🍕</div>
+                <h3>Pizza</h3>
+                <p>8 items</p>
+            </div>
+            <div class="category-card">
+                <div class="category-img">🍚</div>
+                <h3>Rice & Meals</h3>
+                <p>15 items</p>
+            </div>
+            <div class="category-card">
+                <div class="category-img">🍟</div>
+                <h3>Snacks</h3>
+                <p>20 items</p>
+            </div>
+            <div class="category-card">
+                <div class="category-img">🥤</div>
+                <h3>Drinks</h3>
+                <p>10 items</p>
+            </div>
+            <div class="category-card">
+                <div class="category-img">🍰</div>
+                <h3>Desserts</h3>
+                <p>6 items</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 4. POPULAR ON CAMPUS ================= -->
+    <section class="section">
+        <div class="section-header">
+            <div>
+                <span class="section-subtitle">FEATURED</span>
+                <h2 class="section-title">Popular on Campus</h2>
+            </div>
+            <a href="#" class="view-all">View All →</a>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="product-badge">Best Seller</span>
+                    <!-- Image: images/burger.jpg -->
+                   <img src="burger.jpg" alt="Classic Beef Burger" class="product-image">
+                    <span class="rating-pill">⭐ 4.8</span>
+                </div>
+                <div class="product-body">
+                    <h3>Classic Beef Burger</h3>
+                    <p>Juicy beef, fresh veggies, toasted bun</p>
+                    <div class="product-bottom">
+                        <span class="price">$6.50</span>
+                        <button class="add-btn">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="product-badge">Campus Fav</span>
+                    <!-- Image: images/nasi-lemak.jpg -->
+                    <img src="chicken.jpg" alt="Chicken Nasi Lemak" class="product-image">
+                    <span class="rating-pill">⭐ 4.9</span>
+                </div>
+                <div class="product-body">
+                    <h3>Chicken Nasi Lemak</h3>
+                    <p>Fragrant rice with spicy chicken sambal</p>
+                    <div class="product-bottom">
+                        <span class="price">$5.50</span>
+                        <button class="add-btn">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="product-badge">Popular</span>
+                    <!-- Image: images/pizza-slice.jpg -->
+                    <img src="pizza.jpg" alt="Margherita Pizza Slice" class="product-image">
+                    <span class="rating-pill">⭐ 4.7</span>
+                </div>
+                <div class="product-body">
+                    <h3>Margherita Pizza Slice</h3>
+                    <p>Classic cheese and tomato on crispy crust</p>
+                    <div class="product-bottom">
+                        <span class="price">$3.00</span>
+                        <button class="add-btn">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="product-badge">Best Seller</span>
+                    <!-- Image: images/salmon-bowl.jpg -->
+                    <img src="salmon.jpg" alt="Teriyaki Salmon Bowl" class="product-image">
+                    <span class="rating-pill">⭐ 4.9</span>
+                </div>
+                <div class="product-body">
+                    <h3>Teriyaki Salmon Bowl</h3>
+                    <p>Fresh salmon with teriyaki glaze</p>
+                    <div class="product-bottom">
+                        <span class="price">$8.50</span>
+                        <button class="add-btn">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="product-badge">Campus Fav</span>
+                    <!-- Image: images/cheese-fries.jpg -->
+                    <img src="cheeses.jpg" alt="Loaded Cheese Fries" class="product-image">
+                    <span class="rating-pill">⭐ 4.7</span>
+                </div>
+                <div class="product-body">
+                    <h3>Loaded Cheese Fries</h3>
+                    <p>Crispy fries loaded with melted cheese</p>
+                    <div class="product-bottom">
+                        <span class="price">$4.50</span>
+                        <button class="add-btn">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="product-badge">New</span>
+                    <!-- Image: images/bubble-tea.jpg -->
+                    <img src="mangotea.jpg" alt="Mango Taro Bubble Tea" class="product-image">
+                    <span class="rating-pill">⭐ 4.6</span>
+                </div>
+                <div class="product-body">
+                    <h3>Mango Taro Bubble Tea</h3>
+                    <p>Sweet mango with chewy tapioca pearls</p>
+                    <div class="product-bottom">
+                        <span class="price">$3.50</span>
+                        <button class="add-btn">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 5. WHY CHOOSE ================= -->
+    <section class="section">
+        <div class="section-header center">
+            <span class="section-subtitle">WHY US</span>
+            <h2 class="section-title">Why Choose CampusEats?</h2>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">⚡</div>
+                <h3>Skip the Queue</h3>
+                <p>Order ahead and skip long lunch lines completely.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">📅</div>
+                <h3>Scheduled Pickup</h3>
+                <p>Choose a pickup time that fits your class schedule.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">📡</div>
+                <h3>Real-Time Order Status</h3>
+                <p>Track your order from kitchen to pickup counter.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💰</div>
+                <h3>Affordable Student Meals</h3>
+                <p>Enjoy delicious food at prices made for students.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 6. HOW IT WORKS ================= -->
+    <section class="section">
+        <div class="section-header center">
+            <span class="section-subtitle">SIMPLE PROCESS</span>
+            <h2 class="section-title">How It Works</h2>
+        </div>
+
+        <div class="steps-wrapper">
+            <div class="step-line"></div>
+            <div class="step">
+                <div class="step-circle">
+                    <span class="step-num">01</span>
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h3>Choose Your Meal</h3>
+                <p>Browse our menu and pick your favorite dishes.</p>
+            </div>
+            <div class="step">
+                <div class="step-circle">
+                    <span class="step-num">02</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <h3>Place Your Order</h3>
+                <p>Confirm your order and choose a pickup time.</p>
+            </div>
+            <div class="step">
+                <div class="step-circle">
+                    <span class="step-num">03</span>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <h3>Pick Up When Ready</h3>
+                <p>Grab your food and get back to your day.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 7. TODAY'S SPECIAL ================= -->
+    <section class="section">
+        <div class="special-banner">
+            <div class="special-left">
+                <div class="special-badge">TODAY ONLY</div>
+                <h2>Grilled Chicken <span class="highlight">Combo Meal</span></h2>
+                <p>Grilled chicken, fresh salad, and a drink — all in one combo.</p>
+                <div class="special-price">
+                    <span class="new-price">$4.50</span>
+                    <span class="old-price">$7.00</span>
+                    <span class="save-pill">Save 36%</span>
+                </div>
+                <a href="#" class="btn-primary">Order Today's Special →</a>
+            </div>
+            <div class="special-right">
+                <!-- Image: images/special-bowl.jpg -->
+                <img src="images/special-bowl.jpg" alt="Special Bowl" class="special-image">
+                <div class="sold-badge">
+                    🔥 58 sold today
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 8. TESTIMONIALS ================= -->
+       <!-- ================= 8. TESTIMONIALS ================= -->
+    <section class="testimonial-section">
+        <div class="section-header center">
+            <span class="section-subtitle">SOCIAL PROOF</span>
+            <h2 class="section-title">What Students Say</h2>
+        </div>
+
+        <div class="testimonial-grid">
+            <!-- Card 1 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"I order from CampusEats literally every day between lectures. The 10-minute pickup is so clutch when you only have a 20-minute break."</p>
+                <div class="user-info">
+                    <div class="user-avatar">👩🏽‍💻</div>
+                    <div class="user-details">
+                        <strong>Priya S.</strong>
+                        <span>BSc Computer Science</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Team ordering with my study group changed everything. We all chip in, one person pays, split is automatic. Honestly genius."</p>
+                <div class="user-info">
+                    <div class="user-avatar">👨🏿‍🎓</div>
+                    <div class="user-details">
+                        <strong>Marcus T.</strong>
+                        <span>BEng Mechanical Engineering</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"The reward points add up fast. I got a free meal after just two weeks. This app genuinely saves me money."</p>
+                <div class="user-info">
+                    <div class="user-avatar">👩🏾‍🏫</div>
+                    <div class="user-details">
+                        <strong>Aisha R.</strong>
+                        <span>BA Economics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★☆</div>
+                <p class="quote">"Finally a canteen app that looks good and actually works. The real-time status means I stop checking every 30 seconds."</p>
+                <div class="user-info">
+                    <div class="user-avatar">👨🏻‍💻</div>
+                    <div class="user-details">
+                        <strong>Jin W.</strong>
+                        <span>MSc Data Science</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= 9. FINAL CTA ================= -->
+        <!-- ================= 9. FINAL CTA ================= -->
+    <section class="cta-section">
+        <div class="cta-box">
+            <!-- Floating Icons -->
+            <div class="cta-icon icon-tl">🍔</div>
+            <div class="cta-icon icon-tr">🥤</div>
+            <div class="cta-icon icon-br">🍕</div>
+
+            <!-- Center Content -->
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <span class="cta-dot"></span> JOIN 2,400+ STUDENTS
+                </div>
+                <h2 class="cta-title">Ready to Skip<br>the Queue?</h2>
+                <p class="cta-sub">
+                    Order your favorite campus meals before you arrive. Get 100 welcome points when you sign up — free.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-btn-primary">Order Now →</a>
+                    <a href="#" class="cta-btn-secondary">Sign In Free</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 10. FOOTER ================= -->
+       <!-- ================= 10. FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Brand & Description -->
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">🍽</div>
+                        <span class="logo-campus">Campus</span><span class="logo-eats">Eats</span>
+                    </div>
+                    <p class="footer-desc">
+                        The smartest way to eat on campus. Order ahead, skip the queue, and spend more time doing what you love.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">X</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">ig</a>
+                        <a href="#" class="social-icon">yf</a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">QUICK LINKS</h4>
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#" class="footer-link">All Kitchens</a>
+                    <a href="#" class="footer-link">Team Ordering</a>
+                    <a href="#" class="footer-link">Order History</a>
+                    <a href="#" class="footer-link">Rewards</a>
+                    <a href="#" class="footer-link">About Us</a>
+                </div>
+
+                <!-- Column 3: Categories -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">CATEGORIES</h4>
+                    <a href="#" class="footer-link">Burgers</a>
+                    <a href="#" class="footer-link">Pizza</a>
+                    <a href="#" class="footer-link">Rice & Meals</a>
+                    <a href="#" class="footer-link">Snacks</a>
+                    <a href="#" class="footer-link">Drinks</a>
+                    <a href="#" class="footer-link">Desserts</a>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">CONTACT</h4>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-text">Campus Food Hub, Block D, Student Centre</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">hello@campuseats.edu</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text">+1 (555) 012-3456</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕒</span>
+                        <span class="contact-text">Mon–Fri 7:30am – 8:00pm</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 CampusEats · Made for students, by students.</p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-link-small">Privacy Policy</a>
+                    <a href="#" class="footer-link-small">Terms of Service</a>
+                    <a href="#" class="footer-link-small">Cookie Settings</a>
+                    <a href="#" class="footer-link-small">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
