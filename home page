@@ -1,60 +1,59 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie Header</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Kitchens - CampusEats</title>
+    <link rel="stylesheet" href="home.css">
     <!-- Font Awesome for the cart and sign-in icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts for a clean, modern look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="header">
         <!-- Logo Section -->
-      <div class="logo">
+        <div class="logo">
             <span class="logo-icon">🍽</span> CampusEats
         </div>
 
         <!-- Navigation Menu -->
         <nav class="nav-menu">
-           <a href="index.html" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">Menu</a>
-            <a href="#" class="nav-link">Service</a>
-            <a href="#" class="nav-link">About us</a>
-            <a href="#" class="nav-link">Contacts</a>
+            <a href="home.php" class="nav-link active">Home</a>
+            <a href="kitchen.php" class="nav-link">Kitchens</a>
+            <a href="#" class="nav-link">Team Order</a>
+            <a href="#" class="nav-link">Order History</a>
+            <a href="#" class="nav-link">Rewards</a>
+            <a href="#" class="nav-link">More</a>
         </nav>
 
         <!-- Right Side Actions -->
         <div class="header-actions">
             <!-- Cart Icon with Badge -->
-            <div class="cart-container">
+            <a href="cart.php" class="cart-container">
                 <i class="fa-solid fa-basket-shopping cart-icon"></i>
-                <span class="cart-badge">0</span>
-            </div>
-
-            <!-- Sign In Button -->
-            <a href="#" class="sign-in-btn">
-                Sign in <i class="fa-solid fa-arrow-right-to-bracket sign-in-icon"></i>
+                <span class="cart-badge" id="cart-count">0</span>
             </a>
+
+            <?php if (isset($_SESSION['user'])): ?>
+                <a href="logout.php" class="sign-in-btn">
+                    Logout <i class="fa-solid fa-arrow-right-from-bracket sign-in-icon"></i>
+                </a>
+            <?php else: ?>
+                <a href="login.php" class="sign-in-btn">
+                    Sign in <i class="fa-solid fa-arrow-right-to-bracket sign-in-icon"></i>
+                </a>
+            <?php endif; ?>
         </div>
     </header>
 
 
-
-
-
-
-
-
     <!-- ================= HERO SECTION ================= -->
-   <section class="hero-section" style="background-image: url('campusfood.jpg');">
+    <section class="hero-section" style="background-image: url('image/canteenhome.jpg');">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            
+
             <!-- Availability Badge -->
             <div class="availability-badge">
                 <span class="dot"></span>
@@ -74,10 +73,14 @@
 
             <!-- Buttons Row -->
             <div class="hero-buttons">
-                <a href="#" class="btn-primary">
+                <a href="menu.php" class="btn-primary">
                     <i class="fa-solid fa-bag-shopping"></i> Order Now <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#" class="btn-secondary">Sign In / Register</a>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <a href="profile.php" class="btn-secondary">My Profile</a>
+                <?php else: ?>
+                    <a href="signup.php" class="btn-secondary">Sign In / Register</a>
+                <?php endif; ?>
             </div>
 
             <!-- Search Bar Row -->
@@ -121,7 +124,11 @@
         </div>
     </section>
 
-    
+    <!-- ================= CUISINE SECTION ================= -->
+    <section class="cuisine-section">
+        <span class="section-subtitle">BROWSE BY CUISINE</span>
+        <h2 class="section-title">What are you craving?</h2>
+
         <div class="cuisine-grid">
             <div class="cuisine-card">
                 <span class="cuisine-emoji">🍔</span>
@@ -150,107 +157,100 @@
         </div>
     </section>
 
-      <!-- ================= SECTION 1: FEATURED KITCHENS ================= -->
-    <section class="featured-section">
-        <div class="featured-header">
-            <div>
-                <span class="section-subtitle">FEATURED</span>
-                <h2 class="section-title">Top kitchens right now</h2>
+    <!-- ================= SECTION 1: FEATURED KITCHENS ================= -->
+   <section class="featured-section">
+    <div class="featured-header">
+        <div>
+            <span class="section-subtitle">FEATURED</span>
+            <h2 class="section-title">Top kitchens right now</h2>
+        </div>
+        <a href="menu.php" class="view-all-link">View All →</a>
+    </div>
+
+    <div class="featured-grid">
+        <!-- Card 1 -->
+        <div class="featured-card">
+            <div class="card-image-wrapper">
+                <span class="card-badge">Most Popular</span>
+                <img src="images/burger.jpg" alt="The Main Kitchen" class="card-image">
             </div>
-            <a href="#" class="view-all-link">View All →</a>
+            <div class="card-body">
+                <h3 class="card-title">The Main Kitchen</h3>
+                <div class="card-meta">
+                    <span class="rating">⭐ 4.8</span>
+                    <span class="delivery-time">10–15 min</span>
+                </div>
+                <!-- এখানে data-id এবং add-to-cart class যোগ করা হয়েছে -->
+                <button class="order-btn add-to-cart" data-id="1">Order Now →</button>
+            </div>
         </div>
 
-        <div class="featured-grid">
-            <!-- Card 1 -->
-            <div class="featured-card">
-                <div class="card-image-wrapper">
-                    <span class="card-badge">Most Popular</span>
-                    <!-- Place your image here: images/kitchen1.jpg -->
-                    <img src="images/kitchen1.jpg" alt="The Main Kitchen" class="card-image">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">The Main Kitchen</h3>
-                    <div class="card-meta">
-                        <span class="rating">⭐ 4.8</span>
-                        <span class="delivery-time">10–15 min</span>
-                    </div>
-                    <button class="order-btn">Order Now →</button>
-                </div>
+        <!-- Card 2 -->
+        <div class="featured-card">
+            <div class="card-image-wrapper">
+                <span class="card-badge">Top Rated</span>
+                <img src="images/chicken.jpg" alt="Sakura Bento" class="card-image">
             </div>
-
-            <!-- Card 2 -->
-            <div class="featured-card">
-                <div class="card-image-wrapper">
-                    <span class="card-badge">Top Rated</span>
-                    <!-- Place your image here: images/kitchen2.jpg -->
-                    <img src="images/kitchen2.jpg" alt="Sakura Bento" class="card-image">
+            <div class="card-body">
+                <h3 class="card-title">Sakura Bento</h3>
+                <div class="card-meta">
+                    <span class="rating">⭐ 4.9</span>
+                    <span class="delivery-time">8–12 min</span>
                 </div>
-                <div class="card-body">
-                    <h3 class="card-title">Sakura Bento</h3>
-                    <div class="card-meta">
-                        <span class="rating">⭐ 4.9</span>
-                        <span class="delivery-time">8–12 min</span>
-                    </div>
-                    <button class="order-btn">Order Now →</button>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="featured-card">
-                <div class="card-image-wrapper">
-                    <span class="card-badge">New</span>
-                    <!-- Place your image here: images/kitchen3.jpg -->
-                    <img src="images/kitchen3.jpg" alt="Spice Garden" class="card-image">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">Spice Garden</h3>
-                    <div class="card-meta">
-                        <span class="rating">⭐ 4.6</span>
-                        <span class="delivery-time">15–20 min</span>
-                    </div>
-                    <button class="order-btn">Order Now →</button>
-                </div>
+                <!-- এখানে data-id এবং add-to-cart class যোগ করা হয়েছে -->
+                <button class="order-btn add-to-cart" data-id="2">Order Now →</button>
             </div>
         </div>
-    </section>
 
+        <!-- Card 3 -->
+        <div class="featured-card">
+            <div class="card-image-wrapper">
+                <span class="card-badge">New</span>
+                <img src="images/pizza.jpg" alt="Spice Garden" class="card-image">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Spice Garden</h3>
+                <div class="card-meta">
+                    <span class="rating">⭐ 4.6</span>
+                    <span class="delivery-time">15–20 min</span>
+                </div>
+                <!-- এখানে data-id এবং add-to-cart class যোগ করা হয়েছে -->
+                <button class="order-btn add-to-cart" data-id="3">Order Now →</button>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- ================= SECTION 2: WHY CAMPUSEATS ================= -->
     <section class="why-section">
         <span class="section-subtitle">WHY CAMPUSEATS</span>
         <h2 class="section-title">Built for student life</h2>
 
         <div class="why-grid">
-            <!-- Feature 1 -->
             <div class="why-card">
                 <div class="why-icon">👥</div>
                 <h3 class="why-title">Team Ordering</h3>
                 <p class="why-desc">Order together with friends and split the bill automatically.</p>
             </div>
-            <!-- Feature 2 -->
             <div class="why-card">
                 <div class="why-icon">🎁</div>
                 <h3 class="why-title">Earn Rewards</h3>
                 <p class="why-desc">Get points on every order and redeem them for free food.</p>
             </div>
-            <!-- Feature 3 -->
             <div class="why-card">
                 <div class="why-icon">⚡</div>
                 <h3 class="why-title">Lightning Fast</h3>
                 <p class="why-desc">Average delivery time of just 12 minutes to your dorm.</p>
             </div>
-            <!-- Feature 4 -->
             <div class="why-card">
                 <div class="why-icon">🏫</div>
                 <h3 class="why-title">Campus-Wide</h3>
                 <p class="why-desc">We deliver to every building on campus, no matter where you are.</p>
             </div>
-            <!-- Feature 5 -->
             <div class="why-card">
                 <div class="why-icon">💳</div>
                 <h3 class="why-title">Flexible Payment</h3>
                 <p class="why-desc">Pay with card, campus card, or digital wallet — your choice.</p>
             </div>
-            <!-- Feature 6 -->
             <div class="why-card">
                 <div class="why-icon">📋</div>
                 <h3 class="why-title">Order History</h3>
@@ -266,21 +266,19 @@
             <h2 class="cta-title">Ready to order your first<br>meal?</h2>
             <p class="cta-desc">Sign up free, earn 100 welcome points, and get your first delivery in under 15 minutes.</p>
             <div class="cta-buttons">
-                <a href="#" class="btn-primary">Get Started Free →</a>
-                <a href="#" class="btn-secondary">Browse Kitchens</a>
+                <a href="signup.php" class="btn-primary">Get Started Free →</a>
+                <a href="menu.php" class="btn-secondary">Browse Kitchens</a>
             </div>
             <div class="cta-circle-icon">🍽️</div>
             <div class="cta-small-icon">🍔</div>
         </div>
     </section>
 
-///
-
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-icon">🍽</div>
         <h2 class="footer-logo">CampusEats</h2>
-        <p class="footer-copy">© 2026 CampusEats · Made for students, by students</p>
+        <p class="footer-copy">© <?php echo date('Y'); ?> CampusEats · Made for students, by students</p>
         <div class="footer-links">
             <a href="#" class="footer-link">Privacy</a>
             <a href="#" class="footer-link">Terms</a>
@@ -288,8 +286,55 @@
         </div>
     </footer>
 
-    <!-- Bottom Section for the Visible Character/Image -->
-   
+
+    <!-- ================= ADD TO CART JAVASCRIPT ================= -->
+    <!-- jQuery (AJAX এর জন্য দরকার) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        // যখনই কোনো "Order Now" বাটনে ক্লিক হবে
+        $('.add-to-cart').click(function(e) {
+            e.preventDefault();
+            
+            // বাটন থেকে আইডি নাও
+            var itemId = $(this).data('id');
+            var button = $(this);
+            
+            // AJAX দিয়ে add_to_cart.php তে পাঠাও
+            $.ajax({
+                url: 'add_to_cart.php',
+                type: 'POST',
+                data: { item_id: itemId },
+                success: function(response) {
+                    // কার্টের নাম্বার আপডেট করো
+                    $('#cart-count').text(response);
+                    
+                    // বাটনের রঙ পরিবর্তন করে ফিডব্যাক দাও
+                    button.text('Added ✓').css('background-color', '#00c853');
+                    
+                    // ২ সেকেন্ড পর বাটন আগের অবস্থায় ফিরিয়ে আনো
+                    setTimeout(function() {
+                        button.text('Order Now →').css('background-color', '#f5a623');
+                    }, 2000);
+                },
+                error: function() {
+                    alert('Something went wrong! Check if add_to_cart.php exists.');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
 
 </body>
 </html>
